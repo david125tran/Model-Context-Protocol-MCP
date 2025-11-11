@@ -1,9 +1,28 @@
 # Model-Context-Protocol-MCP
+---
+## ℹ️ About
+This repository contains hands-on MCP projects that demonstrate safely giving LLMs **real-world tools** — databases, web search, and (coming next) external APIs.  Each project isolates a specific capability and security pattern, following OWASP-aligned best practices for LLM tool orchestration.
+## ✅ Current Projects
+| Project | Capability | Summary |
+|---|---|---|
+**01 — NL → SQL Database Assistant** | Databases | Secure natural-language interface over a local MySQL store with strict SQL controls |
+**02 — LLM Web-Search Pipeline** | Retrieval | Forces real-time external search (Tavily) before response, with strict validation + rate limits |
+
+### 🔜 Coming Soon (Project 03) - API Tooling
+This project is designed to progress like a real-world AI engineering track:
+> **Local DB → Web Retrieval → External API Execution → Beyond**
+
+**Each Project:**
+- Provides its own MCP server + UI
+- Implements security checks (input validation, rate limits, prompt-guarding)
+- Demonstrates **defense-in-depth** patterns for tool-enabled LLMs
+- Is runnable locally and framework-agnostic
+
 
 ---
 
-## 01: Natural-Language AI Assistant for Supplement Sales Analytics 🛍️💬
-- **Project Overview:** This module builds a local MCP server that lets users query a retail supplement sales database using **plain English** instead of SQL.
+## Project 01: Natural-Language AI Assistant for Supplement Sales Analytics 🛍️💬
+- **Project Overview:** This project builds a local MCP server that lets users query a retail supplement sales database using **plain English** instead of SQL.
 - **Highlights:** 
     - The LLM is equipped with controlled database tools. It converts user questions into safe SQL, executes them server-side, and returns structured results + summaries. Examples:
         - *“What were total Vitamin sales in Canada last quarter?”*   
@@ -29,9 +48,9 @@ Least-Privilege DB Access | MySQL user granted SELECT-only role |
 
 ---
 
-## 02: AI Web-Search — Real-Time Retrieval for LLMs 🌐🧠
+## Project 02: AI Web-Search — Real-Time Retrieval for LLMs 🌐🧠
 
-- **Project Overview:**  This module creates a secure MCP server that forces an LLM to pull live data from the web before answering.  Instead of hallucinations, the model fetches fresh context using **Tavily Search** + **OpenAI GPT-4o-mini**, then summarizes results for the user.
+- **Project Overview:**  This project creates a secure MCP server that forces an LLM to pull live data from the web before answering.  Instead of hallucinations, the model fetches fresh context using **Tavily Search** + **OpenAI GPT-4o-mini**, then summarizes results for the user.
 - **Highlights**
   - 🔍 Forced real-time web search before answering
   - 🧱 Input validation + content sanitization
