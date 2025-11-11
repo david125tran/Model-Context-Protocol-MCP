@@ -24,3 +24,5 @@ Secure Output Handling | Removes multi-statements, comments, semicolons |
 LLM-Safe Guards | Regex filters + query wrapping w/ `LIMIT` |
 Defense-in-Depth | Raw SQL & NL-SQL paths both sandboxed |
 Least-Privilege DB Access | MySQL user granted SELECT-only role |
+
+![Client Side UI](https://github.com/david125tran/Model-Context-Protocol-MCP/blob/main/01/ui.png)
