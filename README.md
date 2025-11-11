@@ -56,6 +56,7 @@ Least Privilege | No DB access; only search tool exposed |
 Secrets Protection | `.env` loading + API keys never logged |
 Error Safety | Sanitized exception surfacing (ToolError wrapper) |
 
+![Client Side UI](https://github.com/david125tran/Model-Context-Protocol-MCP/blob/main/02/ui.png)
 
 ---
 
