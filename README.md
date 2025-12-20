@@ -1,12 +1,12 @@
 # Model-Context-Protocol-MCP
 ---
 ## ℹ️ About
-This repository contains hands-on MCP projects that demonstrate safely giving LLMs **real-world tools** — databases, web search, and (coming next) external APIs.  Each project isolates a specific capability and security pattern, following OWASP-aligned best practices for LLM tool orchestration.
+This repository contains hands-on MCP projects that demonstrate safely giving LLMs **real-world tools** - databases, web search, and (coming next) external APIs.  Each project isolates a specific capability and security pattern, following OWASP-aligned best practices for LLM tool orchestration.
 ## ✅ Current Projects
 | Project | Capability | Summary |
 |---|---|---|
-**01 — NL → SQL Database Assistant** | Databases | Secure natural-language interface over a local MySQL store with strict SQL controls |
-**02 — LLM Web-Search Pipeline** | Retrieval | Forces real-time external search (Tavily) before response, with strict validation + rate limits |
+**01 - NL → SQL Database Assistant** | Databases | Secure natural-language interface over a local MySQL store with strict SQL controls |
+**02 - LLM Web-Search Pipeline** | Retrieval | Forces real-time external search (Tavily) before response, with strict validation + rate limits |
 
 ### 🔜 Coming Soon (Project 03) - API Tooling
 This project is designed to progress like a real-world AI engineering track:
