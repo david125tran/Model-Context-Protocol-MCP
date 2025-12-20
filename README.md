@@ -48,7 +48,7 @@ Least-Privilege DB Access | MySQL user granted SELECT-only role |
 
 ---
 
-## Project 02: AI Web-Search — Real-Time Retrieval for LLMs 🌐🧠
+## Project 02: AI Web-Search - Real-Time Retrieval for LLMs 🌐🧠
 
 - **Project Overview:**  This project creates a secure MCP server that forces an LLM to pull live data from the web before answering.  Instead of hallucinations, the model fetches fresh context using **Tavily Search** + **OpenAI GPT-4o-mini**, then summarizes results for the user.
 - **Highlights**
