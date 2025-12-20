@@ -57,7 +57,7 @@ Least-Privilege DB Access | MySQL user granted SELECT-only role |
   - 🚦 Token-bucket rate-limiting (per-tool & global)
   - 🔐 Prompt-injection & misuse filtering
   - 📦 Browser-based UI via FastAPI
-  - 💬 Safe LLM orchestration — **no model-initiated tool calls** (server enforces retrieval first)
+  - 💬 Safe LLM orchestration - **no model-initiated tool calls** (server enforces retrieval first)
 - **Scripts:**
     - `MCP Server.py` - MCP server, forced web search pipeline, safety controls.  This script also has an equipped websearch `search_web()` tool that I wrote but chose not to implement (maybe I will later).
     - `MCP Client.py` - UI for interacting with the assistant
