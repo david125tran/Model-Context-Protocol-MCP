@@ -1,16 +1,13 @@
 # Model-Context-Protocol-MCP
 ---
 ## ℹ️ About
-This repository contains hands-on MCP projects that demonstrate safely giving LLMs **real-world tools** - databases, web search, and (coming next) external APIs.  Each project isolates a specific capability and security pattern, following OWASP-aligned best practices for LLM tool orchestration.
+This repository contains hands-on MCP projects that demonstrate safely giving LLMs **real-world tools** - databases & web search.  Each project isolates a specific capability and security pattern, following OWASP-aligned best practices for LLM tool orchestration.
+
 ## ✅ Current Projects
 | Project | Capability | Summary |
 |---|---|---|
 **01 - NL → SQL Database Assistant** | Databases | Secure natural-language interface over a local MySQL store with strict SQL controls |
 **02 - LLM Web-Search Pipeline** | Retrieval | Forces real-time external search (Tavily) before response, with strict validation + rate limits |
-
-### 🔜 Coming Soon (Project 03) - API Tooling
-This project is designed to progress like a real-world AI engineering track:
-> **Local DB → Web Retrieval → External API Execution → Beyond**
 
 **Each Project:**
 - Provides its own MCP server + UI
@@ -77,5 +74,51 @@ Error Safety | Sanitized exception surfacing (ToolError wrapper) |
 
 ![Client Side UI](https://github.com/david125tran/Model-Context-Protocol-MCP/blob/main/02/ui.png)
 
----
+## Project 03: Interactive MCP Database Explorer (React + MCP UI) 🧭📊
+- **Project Overview:**  **This project is a production-style React frontend** on top of a secure **Model Context Protocol (MCP)** backend.  
+It demonstrates how to safely expose **multiple database tables** to an LLM while giving users a modern, interactive UI to explore schema, generate SQL, and ask natural-language questions.
+- This project connects:
+    - A **secure MCP database server**
+    - A **FastAPI MCP proxy**
+    - A **React (Vite) frontend UI**
+- Example chat demonstrating **natural language queries** to **raw SQL** to **analytics**:
+
+<p align="center">
+  <img src="https://github.com/david125tran/Model-Context-Protocol-MCP/blob/main/03/UI_01.png?raw=true" width="800" />
+</p>
+
+- Repo Layout:
+```
+03/
+│
+├── Run MCP Client.bat                                  # Launch React UI (npm start / vite / etc.)
+├── Run MCP Server.bat                                  # Launch FastMCP database server
+├── Run MCP Proxy.bat                                   # Launch FastAPI MCP proxy (REST → MCP)
+│
+├── .env                                                # LLM environment variables
+├── db.env                                              # DB environment variables
+│
+├── backend/
+│   │
+│   ├── Local DB.py                                     # Load CSV files into local MySQL database
+│   ├── MCP Server.py                                   # Secure MCP server (Natural Language to Raw SQL, schema tools)
+│   ├── MCP Proxy.py                                    # FastAPI proxy exposing REST endpoints
+│   ├── 2018_Central_Park_Squirrel_Census.csv
+│   └── Supplement_Sales_Weekly.csv  
+│
+├── frontend/
+│   │
+│   ├── package.json                                    # Frontend dependencies & scripts
+│   ├── node_modules/
+│   │
+│   ├── public/
+│   │ 
+│   └── src/
+│       ├── App.js                                      # Main chat UI (state, API calls, history)
+│       ├── App.css                                     # Chat UI styling
+│       ├── index.js                                    # React entry point → App
+│       └── index.css                                   # Global styles (resets, fonts)
+│
+└── directory.md                                        # Project directory overview (this file)
+```
 
