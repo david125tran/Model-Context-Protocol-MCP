@@ -75,11 +75,11 @@ Error Safety | Sanitized exception surfacing (ToolError wrapper) |
 ![Client Side UI](https://github.com/david125tran/Model-Context-Protocol-MCP/blob/main/02/ui.png)
 
 ## Project 03: Interactive MCP Database Explorer (React + MCP UI) 🧭📊
-- **Project Overview:**  **This project is a production-style React frontend** on top of a secure **Model Context Protocol (MCP)** backend.  
-It demonstrates how to safely expose **multiple database tables** to an LLM while giving users a modern, interactive UI to explore schema, generate SQL, and ask natural-language questions.
+- **Project Overview:**  **This project is a production-style React frontend** on top of a secure **Model Context Protocol (MCP)** backend.  It demonstrates how to safely expose **multiple database tables** to an LLM while giving users a modern, interactive UI to explore schema, generate SQL, and ask natural-language questions.  I introduce a **FastAPI MCP Proxy** as a deliberate architectural boundary between the frontend UI and the MCP tool server.
+
 - This project connects:
     - A **secure MCP database server**
-    - A **FastAPI MCP proxy**
+    - A **FastAPI MCP proxy** - The MCP Proxy provides a secure REST boundary between the frontend and MCP tools, mirroring real-world deployment patterns and preventing direct client access to LLM execution or databases.
     - A **React (Vite) frontend UI**
 - Example chat demonstrating **natural language queries** to **raw SQL** to **analytics**:
 
