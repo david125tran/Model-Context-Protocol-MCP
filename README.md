@@ -8,13 +8,13 @@ This repository contains hands-on MCP projects that demonstrate safely giving LL
 |---|---|---|
 **01 - NL → SQL Database Assistant** | Databases | Secure natural-language interface over a local MySQL store with strict SQL controls |
 **02 - LLM Web-Search Pipeline** | Retrieval | Forces real-time external search (Tavily) before response, with strict validation + rate limits |
+**03 - Interactive MCP Database Explorer** | Multi-DB Analytics | Extends Project 01 with a production-style React UI, allowing safe inspection and querying of many database tables through MCP (schema discovery, NL → SQL, results & summaries) |
 
 **Each Project:**
 - Provides its own MCP server + UI
 - Implements security checks (input validation, rate limits, prompt-guarding)
 - Demonstrates **defense-in-depth** patterns for tool-enabled LLMs
 - Is runnable locally and framework-agnostic
-
 
 ---
 
