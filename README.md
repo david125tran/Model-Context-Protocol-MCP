@@ -29,7 +29,7 @@ This repository contains hands-on MCP projects that demonstrate safely giving LL
     - `Local DB.py` - Loads Supplement_Sales_Weekly.csv into MySQL
     - `MCP Server.py` - Secure database MCP server + Natural Language to raw SQL code
     - `MCP Client.py` - UI for interacting with the assistant
-- **🔒 Security (OWASP Top Ten Best Practices):**
+- **🔒 Security (OWASP-Aligned Controls):**
 
 | OWASP Concept | Implementation |
 |---|---|
@@ -59,7 +59,7 @@ Least-Privilege DB Access | MySQL user granted SELECT-only role |
     - `MCP Server.py` - MCP server, forced web search pipeline, safety controls.  This script also has an equipped websearch `search_web()` tool that I wrote but chose not to implement (maybe I will later).
     - `MCP Client.py` - UI for interacting with the assistant
     - `guard.py` - Input sanitizers (regex filters, context limiter, secret redaction)
-- **🔒 Security (OWASP Top Ten Best Practices):**
+- **🔒 Security (OWASP-Aligned Controls):**
 
 | Risk Category | Implementation |
 |---|---|
