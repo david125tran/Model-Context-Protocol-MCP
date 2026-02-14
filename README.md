@@ -16,6 +16,16 @@ This repository contains hands-on MCP projects that demonstrate safely giving LL
 - Demonstrates **defense-in-depth** patterns for tool-enabled LLMs
 - Is runnable locally and framework-agnostic
 
+**🔒 Production Hardening Considerations**
+If deployed beyond local development, these services would be:
+- Placed behind OAuth2 / JWT-based authentication at the gateway layer
+- Protected with TLS via reverse proxy (NGINX / cloud load balancer)
+- Deployed with least-privilege database credentials
+- Monitored with structured audit logging and request tracing
+- Integrated with observability tooling (metrics + rate monitoring)  
+
+My implementations here focuses on secure LLM tool orchestration and database safety controls.
+
 ---
 
 ## Project 01: Natural-Language AI Assistant for Supplement Sales Analytics 🛍️💬
